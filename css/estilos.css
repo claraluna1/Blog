@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing:border-box ;
+    -moz-box-sizing:border-box ;
+    box-sizing:border-box ;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background: #C8FBFB;
+}
+
+.contenedor {
+    width: 1000px;
+    margin: 20px auto;
+    overflow: hidden; /*se debe poner al contenedor padre de main y aside porque les puse float:left. y asi no se vendra el footer para arriba*/
+
+}
+
+header {
+    background-color:#A3EAFF ;
+}
+
+header nav {
+   width: 100%; 
+}
+
+header nav ul {
+    width: 100%;
+    overflow: hidden; /*hay que ponerlo en el contenedor padre en este caso de li, para que al poner el float:left no se borre el fondo*/
+    list-style: none;
+}
+
+header nav ul li {
+    float: left; /*tambien podria usar display: inline-block;*/
+}
+
+header nav ul li a{
+    text-decoration: none;
+    display: inline-block; /*para poderle poner un padding*/
+    padding:15px 20px;
+    color: black;
+}
+
+header nav ul li a:hover {
+    background-color: royalblue ;
+    color: white;
+}
+
+.main {
+    width: 700px;
+    background-color: white;
+    float: left;
+}
+
+.main .imagen { /*aqui estoy accediendo al contenedor de la imagen*/
+    width: 100%;
+}
+
+.main .imagen img { /*aqui estoy accediendo a la imagen como tal*/
+    width: 100%;
+    vertical-align: top; /*eliminamos un pequeño margen que tiene*/
+}
+
+.main .posts {
+    padding: 40px;
+}
+
+.main .posts article h2 {
+    margin-bottom: 20px; /*margen hacia abajo*/
+    color: #7986E6  ;
+}
+
+.main .posts article p {
+    margin-bottom: 15px; /*margen hacia abajo*/
+    line-height: 27px; /*separacion de la fuente*/
+}
+
+aside {
+    width: 300px;
+    background-color:#53409F;
+    padding: 20px;
+    color: white;
+    float: left;
+
+}
+aside .widget {
+    margin-bottom: 20px; 
+}
+
+aside .widget .titulo {
+    color: #FB6EB2 ;
+    border-bottom: 1px solid #FB6EB2 ;
+    margin-bottom: 10px;
+}
+
+aside .widget ul{
+    list-style: none;
+
+}
+
+aside .widget ul li{
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    padding: 10px 0;
+}
+
+aside .widget ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+aside .widget ul li a:hover {
+    color: #CDF1F6;
+}
+
+aside .widget p{
+    line-height: 27px;
+}
+
+footer {
+    width: 700px ;
+    /*overflow: hidden tambien se soluciona el problema de que quede arriba o pongo clear: both*/
+    clear: both;
+    background-color: plum;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
